@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Historia Clínica Dental</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="EstilosPacientes.css">
+</head>
+
+<body>
+    <h1>Historia Clínica Dental</h1>
+
+    <form action="http://192.168.100.13/Smilebook/conect2.php" method="post">
+        <label for="fecha_elaboracion">Fecha de Elaboración del Expediente:</label>
+        <input type="date" name="fecha_elaboracion" id="fecha_elaboracion" required>
+
+        <label for="numero_expediente">Número de Expediente:</label>
+        <input type="text" name="numero_expediente" id="numero_expediente" required><br>
+
+        <h2>Ficha de Identificación:</h2>
+        <label for="nombres">Nombre(s):</label>
+        <input type="text" name="nombres" id="nombres" required>
+
+        <label for="apellido_paterno">Apellido Paterno:</label>
+        <input type="text" name="apellido_paterno" id="apellido_paterno" required>
+
+        <label for="apellido_materno">Apellido Materno:</label>
+        <input type="text" name="apellido_materno" id="apellido_materno"><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required><br>
+
+        <label>Género:</label>
+        <input type="radio" name="genero" value="Masculino" id="genero_masculino" required>
+        <label for="genero_masculino">Masculino</label>
+        <input type="radio" name="genero" value="Femenino" id="genero_femenino" required>
+        <label for="genero_femenino">Femenino</label><br>
+
+        <label for="telefono_fijo">Teléfono Fijo:</label>
+        <input type="tel" name="telefono_fijo" id="telefono_fijo">
+
+        <label for="telefono_movil">Teléfono Móvil:</label>
+        <input type="tel" name="telefono_movil" id="telefono_movil"><br>
+
+        <label for="domicilio">Domicilio:</label>
+        <input type="text" name="domicilio" id="domicilio">
+
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" name="codigo_postal" id="codigo_postal"><br>
+
+        <label for="estado_civil">Estado Civil:</label>
+        <select name="estado_civil" id="estado_civil">
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="divorciado">Divorciado</option>
+            </select><br>
+
+
+        <label for="tipo_sanguineo">Tipo Sanguíneo:</label>
+        <input type="text" name="tipo_sanguineo" id="tipo_sanguineo"><br>
+
+        <label for="contacto">Contacto de Emergencia:</label><br>
+        <label for="nombre_emergencia">Nombre:</label>
+        <input type="text" name="nombre_emergencia" id="nombre_emergencia"><br>
+        <label for="contacto_emergencia">Telefono:</label>
+        <input type="text" name="contacto_emergencia" id="contacto_emergencia"><br>
+
+        <h2>Antecedentes Personales No Patológicos:</h2>
+        <h4>Vacunas:</h4>
+        <label for="bcg">BCG:</label>
+        <input type="radio" name="bcg" value="Si" id="bcg_si">
+        <label for="bcg_si">Sí</label>
+        <input type="radio" name="bcg" value="No" id="bcg_no">
+        <label for="bcg_no">No</label><br>
+
+        <label for="hepatitis_cc">Hepatitis C:</label>
+        <input type="radio" name="hepatitis_cc" value="Si" id="hepatitis_cc_si">
+        <label for="hepatitis_cc_si">Sí</label>
+        <input type="radio" name="hepatitis_cc" value="No" id="hepatitis_cc_no">
+        <label for="hepatitis_cc_no">No</label><br>
+
+        <label for="pentavalente">Pentavalente:</label>
+        <input type="radio" name="pentavalente" value="Si" id="pentavalente_si">
+        <label for="pentavalente_si">Sí</label>
+        <input type="radio" name="pentavalente" value="No" id="pentavalente_no">
+        <label for="pentavalente_no">No</label><br>
+
+        <label for="rotavirus">Rotavirus:</label>
+        <input type="radio" name="rotavirus" value="Si" id="rotavirus_si">
+        <label for="rotavirus_si">Sí</label>
+        <input type="radio" name="rotavirus" value="No" id="rotavirus_no">
+        <label for="rotavirus_no">No</label><br>
+
+        <label for="neumococcica">Neumocóccica:</label>
+        <input type="radio" name="neumococcica" value="Si" id="neumococcica_si">
+        <label for="neumococcica_si">Sí</label>
+        <input type="radio" name="neumococcica" value="No" id="neumococcica_no">
+        <label for="neumococcica_no">No</label><br>
+
+        <label for="influenzaa">Influenza:</label>
+        <input type="radio" name="influenzaa" value="Si" id="influenzaa_si">
+        <label for="influenzaa_si">Sí</label>
+        <input type="radio" name="influenzaa" value="No" id="influenzaa_no">
+        <label for="influenzaa_no">No</label><br>
+
+        <label for="papiloma">Papiloma:</label>
+        <input type="radio" name="papiloma" value="Si" id="papiloma_si">
+        <label for="papiloma_si">Sí</label>
+        <input type="radio" name="papiloma" value="No" id="papiloma_no">
+        <label for="papiloma_no">No</label><br>
+
+        <label for="sabin">Sabin (Poliomielitis):</label>
+        <input type="radio" name="sabin" value="Si" id="sabin_si">
+        <label for="sabin_si">Sí</label>
+        <input type="radio" name="sabin" value="No" id="sabin_no">
+        <label for="sabin_no">No</label><br>
+
+        <label for="rs">RS (Sarampión, Rubéola):</label>
+        <input type="radio" name="rs" value="Si" id="rs_si">
+        <label for="rs_si">Sí</label>
+        <input type="radio" name="rs" value="No" id="rs_no">
+        <label for="rs_no">No</label><br>
+
+        <label for="dpt">DPT (Difteria, Tosferina, Tétanos):</label>
+        <input type="radio" name="dpt" value="Si" id="dpt_si">
+        <label for="dpt_si">Sí</label>
+        <input type="radio" name="dpt" value="No" id="dpt_no">
+        <label for="dpt_no">No</label><br>
+
+        <label for="srp">SRP (Sarampión, Rubéola, Meningitis):</label>
+        <input type="radio" name="srp" value="Si" id="srp_si">
+        <label for="srp_si">Sí</label>
+        <input type="radio" name="srp" value="No" id="srp_no">
+        <label for="srp_no">No</label><br>
+
+        <label for="otra_vacuna">Otra (Especificar):</label>
+        <input type="text" name="otra_vacuna" id="otra_vacuna"><br>
+
+        <h4>Hábitos tóxicos:</h4>
+        <label for="alcohol">Alcohol:</label>
+        <input type="radio" name="alcohol" value="Si" id="alcohol_si">
+        <label for="alcohol_si">Sí</label>
+        <input type="radio" name="alcohol" value="No" id="alcohol_no">
+        <label for="alcohol_no">No</label>
+        <label for="anios_uso_alcohol">Años de Consumo de Alcohol:</label>
+        <input type="text" name="anios_uso_alcohol" id="anios_uso_alcohol"><br>
+        <label for="fecha_ultimo_uso_alcohol">Fecha del Último Uso de Alcohol:</label>
+        <input type="date" name="fecha_ultimo_uso_alcohol" id="fecha_ultimo_uso_alcohol"><br>
+
+        <label for="tabaco">Tabaco:</label>
+        <input type="radio" name="tabaco" value="Si" id="tabaco_si">
+        <label for="tabaco_si">Sí</label>
+        <input type="radio" name="tabaco" value="No" id="tabaco_no">
+        <label for="tabaco_no">No</label>
+        <label for="anios_uso_tabaco">Años de Consumo de Tabaco:</label>
+        <input type="text" name="anios_uso_tabaco" id="anios_uso_tabaco"><br>
+        <label for="fecha_ultimo_uso_tabaco">Fecha del Último Uso de Tabaco:</label>
+        <input type="date" name="fecha_ultimo_uso_tabaco" id="fecha_ultimo_uso_tabaco"><br>
+
+        <label for="estupefacientes">Estupefacientes:</label>
+        <input type="radio" name="estupefacientes" value="Si" id="estupefacientes_si">
+        <label for="estupefacientes_si">Sí</label>
+        <input type="radio" name="estupefacientes" value="No" id="estupefacientes_no">
+        <label for="estupefacientes_no">No</label>
+        <label for="anios_uso_estupefacientes">Años de Consumo de Estupefacientes:</label>
+        <input type="text" name="anios_uso_estupefacientes" id="anios_uso_estupefacientes"><br>
+        <label for="fecha_ultimo_uso_estupefacientes">Fecha del Último Uso de Estupefacientes:</label>
+        <input type="date" name="fecha_ultimo_uso_estupefacientes" id="fecha_ultimo_uso_estupefacientes"><br>
+
+        <h4>Alergias:</h4>
+        <label for="alergias">Alergias (Especificar):</label>
+        <input type="text" name="alergias" id="alergias"><br>
+
+        <h4>Medicamento fijo:</h4>
+        <label for="medicamentos">Medicamentos y Fármacos (Especificar):</label>
+        <input type="text" name="medicamentos" id="medicamentos"><br>
+
+        <h2>Antecedentes Heredo Familiares:</h2>
+        <label for="antecedentes_familiares">Enfermedad(es):</label>
+        <input type="text" name="antecedentes_familiares" id="antecedentes_familiares">
+        <label for="parentesco">Parentesco:</label>
+        <select name="parentesco" id="parentesco">
+                <option value="Abuelo">Abuelo</option>
+                <option value="Abuela">Abuela</option>
+                <option value="Padre">Padre</option>
+                <option value="Madre">Madre</option>
+            </select>
+
+        <h2>Antecedentes Personales Patológicos:</h2>
+        <h4>Enfermedades propias:</h4>
+        <label for="enfermedad_patologica">Enfermedad:</label>
+        <input type="text" name="enfermedad_patologica" id="enfermedad_patologica">
+
+        <label for="tiempo_evolucion">Tiempo de Evolución:</label>
+        <input type="text" name="tiempo_evolucion" id="tiempo_evolucion"><br>
+
+        <h4>Enfermedades propias de la infancia:</h4>
+        <label for="amigdalitis">Amigdalitis:</label>
+        <input type="radio" name="amigdalitis" value="Si" id="amigdalitis_si">
+        <label for="amigdalitis_si">Sí</label>
+        <input type="radio" name="amigdalitis" value="No" id="amigdalitis_no">
+        <label for="amigdalitis_no">No</label><br>
+
+        <label for="escarlatina">Escarlatina:</label>
+        <input type="radio" name="escarlatina" value="Si" id="escarlatina_si">
+        <label for="escarlatina_si">Sí</label>
+        <input type="radio" name="escarlatina" value="No" id="escarlatina_no">
+        <label for="escarlatina_no">No</label><br>
+
+        <label for="fiebre_reumatica">Fiebre Reumática:</label>
+        <input type="radio" name="fiebre_reumatica" value="Si" id="fiebre_reumatica_si">
+        <label for="fiebre_reumatica_si">Sí</label>
+        <input type="radio" name="fiebre_reumatica" value="No" id="fiebre_reumatica_no">
+        <label for="fiebre_reumatica_no">No</label><br>
+
+        <label for="hepatitis_a">Hepatitis A:</label>
+        <input type="radio" name="hepatitis_a" value="Si" id="hepatitis_a_si">
+        <label for="hepatitis_a_si">Sí</label>
+        <input type="radio" name="hepatitis_a" value="No" id="hepatitis_a_no">
+        <label for="hepatitis_a_no">No</label><br>
+
+        <label for="hepatitis_b">Hepatitis B:</label>
+        <input type="radio" name="hepatitis_b" value="Si" id="hepatitis_b_si">
+        <label for="hepatitis_b_si">Sí</label>
+        <input type="radio" name="hepatitis_b" value="No" id="hepatitis_b_no">
+        <label for="hepatitis_b_no">No</label><br>
+
+        <label for="hepatitis_c">Hepatitis C:</label>
+        <input type="radio" name="hepatitis_c" value="Si" id="hepatitis_c_si">
+        <label for="hepatitis_c_si">Sí</label>
+        <input type="radio" name="hepatitis_c" value="No" id="hepatitis_c_no">
+        <label for="hepatitis_c_no">No</label><br>
+
+        <label for="influenza">Influenza:</label>
+        <input type="radio" name="influenza" value="Si" id="influenza_si">
+        <label for="influenza_si">Sí</label>
+        <input type="radio" name="influenza" value="No" id="influenza_no">
+        <label for="influenza_no">No</label><br>
+
+        <label for="parotiditis">Parotiditis:</label>
+        <input type="radio" name="parotiditis" value="Si" id="parotiditis_si">
+        <label for="parotiditis_si">Sí</label>
+        <input type="radio" name="parotiditis" value="No" id="parotiditis_no">
+        <label for="parotiditis_no">No</label><br>
+
+        <label for="poliomielitis">Poliomielitis:</label>
+        <input type="radio" name="poliomielitis" value="Si" id="poliomielitis_si">
+        <label for="poliomielitis_si">Sí</label>
+        <input type="radio" name="poliomielitis" value="No" id="poliomielitis_no">
+        <label for="poliomielitis_no">No</label><br>
+
+        <label for="roseola">Roséola:</label>
+        <input type="radio" name="roseola" value="Si" id="roseola_si">
+        <label for="roseola_si">Sí</label>
+        <input type="radio" name="roseola" value="No" id="roseola_no">
+        <label for="roseola_no">No</label><br>
+
+        <label for="rubeola">Rubeola:</label>
+        <input type="radio" name="rubeola" value="Si" id="rubeola_si">
+        <label for="rubeola_si">Sí</label>
+        <input type="radio" name="rubeola" value="No" id="rubeola_no">
+        <label for="rubeola_no">No</label><br>
+
+        <label for="sarampion">Sarampión:</label>
+        <input type="radio" name="sarampion" value="Si" id="sarampion_si">
+        <label for="sarampion_si">Sí</label>
+        <input type="radio" name="sarampion" value="No" id="sarampion_no">
+        <label for="sarampion_no">No</label><br>
+
+        <label for="tuberculosis">Tuberculosis:</label>
+        <input type="radio" name="tuberculosis" value="Si" id="tuberculosis_si">
+        <label for="tuberculosis_si">Sí</label>
+        <input type="radio" name="tuberculosis" value="No" id="tuberculosis_no">
+        <label for="tuberculosis_no">No</label><br>
+
+        <label for="varicela">Varicela:</label>
+        <input type="radio" name="varicela" value="Si" id="varicela_si">
+        <label for="varicela_si">Sí</label>
+        <input type="radio" name="varicela" value="No" id="varicela_no">
+        <label for="varicela_no">No</label><br>
+
+        <label for="otra_enfermedad">Otra (Especificar):</label>
+        <input type="text" name="otra_enfermedad" id="otra_enfermedad"><br>
+
+        <h4>Información hospitalaria:</h4>
+        <label for="hospitalizado">¿Ha estado hospitalizado en los últimos 5 años?</label>
+        <input type="radio" name="hospitalizado" value="Si" id="hospitalizado_si">
+        <label for="hospitalizado_si">Sí</label>
+        <input type="radio" name="hospitalizado" value="No" id="hospitalizado_no">
+        <label for="hospitalizado_no">No</label>
+        <label for="tiempo_hospitalizado">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_hospitalizado" id="tiempo_hospitalizado"><br>
+
+        <label for="intervencion_quirurgica">¿Ha sido intervenido quirúrgicamente?</label>
+        <input type="radio" name="intervencion_quirurgica" value="Si" id="intervencion_quirurgica_si">
+        <label for="intervencion_quirurgica_si">Sí</label>
+        <input type="radio" name="intervencion_quirurgica" value="No" id="intervencion_quirurgica_no">
+        <label for="intervencion_quirurgica_no">No</label>
+        <label for="tiempo_intervencion_quirurgica">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_intervencion_quirurgica" id="tiempo_intervencion_quirurgica"><br>
+
+        <label for="experiencias_dentales_desagradables">¿Ha tenido experiencias dentales desagradables?</label>
+        <input type="radio" name="experiencias_dentales_desagradables" value="Si" id="experiencias_dentales_desagradables_si">
+        <label for="experiencias_dentales_desagradables_si">Sí</label>
+        <input type="radio" name="experiencias_dentales_desagradables" value="No" id="experiencias_dentales_desagradables_no">
+        <label for="experiencias_dentales_desagradables_no">No</label>
+        <label for="tiempo_experiencias_dentales_desagradables">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_experiencias_dentales_desagradables" id="tiempo_experiencias_dentales_desagradables"><br>
+
+        <label for="traumatismos">¿Ha sufrido traumatismos?</label>
+        <input type="radio" name="traumatismos" value="Si" id="traumatismos_si">
+        <label for="traumatismos_si">Sí</label>
+        <input type="radio" name="traumatismos" value="No" id="traumatismos_no">
+        <label for="traumatismos_no">No</label>
+        <label for="tiempo_traumatismos">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_traumatismos" id="tiempo_traumatismos"><br>
+
+        <label for="transfusion">¿Ha recibido alguna transfusión?</label>
+        <input type="radio" name="transfusion" value="Si" id="transfusion_si">
+        <label for="transfusion_si">Sí</label>
+        <input type="radio" name="transfusion" value="No" id="transfusion_no">
+        <label for="transfusion_no">No</label>
+        <label for="tiempo_transfusion">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_transfusion" id="tiempo_transfusion"><br>
+
+        <label for="transplantes_injertos">¿Ha recibido trasplantes o injertos?</label>
+        <input type="radio" name="transplantes_injertos" value="Si" id="transplantes_injertos_si">
+        <label for="transplantes_injertos_si">Sí</label>
+        <input type="radio" name="transplantes_injertos" value="No" id="transplantes_injertos_no">
+        <label for="transplantes_injertos_no">No</label>
+        <label for="tiempo_transplantes_injertos">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_transplantes_injertos" id="tiempo_transplantes_injertos"><br>
+
+        <label for="implantacion_material">¿Le han implantado algún material?</label>
+        <input type="radio" name="implantacion_material" value="Si" id="implantacion_material_si">
+        <label for="implantacion_material_si">Sí</label>
+        <input type="radio" name="implantacion_material" value="No" id="implantacion_material_no">
+        <label for="implantacion_material_no">No</label>
+        <label for="tiempo_implantacion_material">Hace cuanto tiempo (Especificar):</label>
+        <input type="text" name="tiempo_implantacion_material" id="tiempo_implantacion_material"><br>
+
+        <h4>Revisión por aparatos o sistemas:</h4>
+        <label for="auditivo">Auditivo:</label>
+        <input type="text" name="auditivo" id="auditivo"><br>
+
+        <label for="cardiovascular">Cardiovascular:</label>
+        <input type="text" name="cardiovascular" id="cardiovascular"><br>
+
+        <label for="digestivo">Digestivo:</label>
+        <input type="text" name="digestivo" id="digestivo"><br>
+
+        <label for="endocrino">Endocrino:</label>
+        <input type="text" name="endocrino" id="endocrino"><br>
+
+        <label for="genitourinario">Genitourinario:</label>
+        <input type="text" name="genitourinario" id="genitourinario"><br>
+
+        <label for="hemolinfatico">Hemolinfático:</label>
+        <input type="text" name="hemolinfatico" id="hemolinfatico"><br>
+
+        <label for="musculo_esqueletico">Músculo Esquelético:</label>
+        <input type="text" name="musculo_esqueletico" id="musculo_esqueletico"><br>
+
+        <label for="nervios">Nervios:</label>
+        <input type="text" name "nervios" id="nervios"><br>
+
+        <label for="ocular">Ocular:</label>
+        <input type="text" name="ocular" id="ocular"><br>
+
+        <label for="respiratorio">Respiratorio:</label>
+        <input type="text" name="respiratorio" id="respiratorio"><br>
+
+        <label for="tegumentario">Tegumentario:</label>
+        <input type="text" name="tegumentario" id="tegumentario"><br>
+
+        <label for="reproductor_femenino">Reproductor Femenino:</label>
+        <input type="text" name="reproductor_femenino" id="reproductor_femenino"><br>
+
+        <label for="embarazo">Embarazo:</label>
+        <input type="radio" name="embarazo" value="Si" id="embarazo_si">
+        <label for="embarazo_si">Sí</label>
+        <input type="radio" name="embarazo" value="No" id="embarazo_no">
+        <label for="embarazo_no">No</label>
+        <label for="semanas_embarazo">Número de semanas:</label>
+        <input type="text" name="semanas_embarazo" id="semanas_embarazo"><br>
+
+        <label for="abortos">Abortos:</label>
+        <input type="radio" name="abortos" value="Si" id="abortos_si">
+        <label for="abortos_si">Sí</label>
+        <input type="radio" name="abortos" value="No" id="abortos_no">
+        <label for="abortos_no">No</label><br>
+
+        <label for="lactancia">Lactancia:</label>
+        <input type="radio" name="lactancia" value="Si" id="lactancia_si">
+        <label for="lactancia_si">Sí</label>
+        <input type="radio" name="lactancia" value="No" id="lactancia_no">
+        <label for="lactancia_no">No</label><br>
+
+        <label for="anticonceptivos">Uso de Anticonceptivos:</label>
+        <input type="radio" name="anticonceptivos" value="Si" id="anticonceptivos_si">
+        <label for="anticonceptivos_si">Sí</label>
+        <input type="radio" name="anticonceptivos" value="No" id="anticonceptivos_no">
+        <label for="anticonceptivos_no">No</label><br>
+
+        <label for="menopausia">Menopausia:</label>
+        <input type="radio" name="menopausia" value="Si" id="menopausia_si">
+        <label for="menopausia_si">Sí</label>
+        <input type="radio" name="menopausia" value="No" id="menopausia_no">
+        <label for="menopausia_no">No</label><br>
+
+        <label for="fecha_ultima_regla">Fecha de Última Regla:</label>
+        <input type="date" name="fecha_ultima_regla" id="fecha_ultima_regla">
+
+        <label for="anomalias_ciclo_menstrual">Anomalías en el Ciclo Menstrual:</label>
+        <input type="radio" name="anomalias_ciclo_menstrual" value="Si" id="anomalias_ciclo_menstrual_si">
+        <label for="anomalias_ciclo_menstrual_si">Sí</label>
+        <input type="radio" name="anomalias_ciclo_menstrual" value="No" id="anomalias_ciclo_menstrual_no">
+        <label for="anomalias_ciclo_menstrual_no">No</label><br>
+
+
+        <h2>Historial Dental:</h2>
+        <label for="razon_consulta">¿Por qué asistió a consulta?</label>
+        <textarea type="text" name="razon_consulta" id="razon_consulta"></textarea><br>
+
+        <label for="consulto_profesional">¿Consultó a otro profesional previamente?</label>
+        <input type="radio" name="consulto_profesional" value="Si" id="consulto_profesional_si">
+        <label for="consulto_profesional_si">Sí</label>
+        <input type="radio" name="consulto_profesional" value="No" id="consulto_profesional_no">
+        <label for="consulto_profesional_no">No</label><br>
+
+        <label for="tomo_medicamento">¿Ha tomado algún medicamento?</label>
+        <input type="radio" name="tomo_medicamento" value="Si" id="tomo_medicamento_si">
+        <label for="tomo_medicamento_si">Sí</label>
+        <input type="radio" name="tomo_medicamento" value="No" id="tomo_medicamento_no">
+        <label for="tomo_medicamento_no">No</label><br>
+
+        <label for="nombre_medicamentos">Nombre de los medicamentos:</label>
+        <input type="text" name="nombre_medicamentos" id="nombre_medicamentos"><br>
+
+        <label for="desde_cuando_medicamentos">Desde cuándo los tomó:</label>
+        <input type="text" name="desde_cuando_medicamentos" id="desde_cuando_medicamentos"><br>
+
+        <label for="obtuvo_resultados">¿Obtuvo resultados con los medicamentos?</label>
+        <input type="radio" name="obtuvo_resultados" value="Si" id="obtuvo_resultados_si">
+        <label for="obtuvo_resultados_si">Sí</label>
+        <input type="radio" name="obtuvo_resultados" value="No" id="obtuvo_resultados_no">
+        <label for="obtuvo_resultados_no">No</label><br>
+
+        <label for="sintio_dolor">¿Ha sentido dolor?</label>
+        <input type="radio" name="sintio_dolor" value="Si" id="sintio_dolor_si">
+        <label for="sintio_dolor_si">Sí</label>
+        <input type="radio" name="sintio_dolor" value="No" id="sintio_dolor_no">
+        <label for="sintio_dolor_no">No</label><br>
+
+        <label for="tipo_dolor">Tipo de dolor:</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Suave" id="suave">
+        <label for="suave">Suave</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Moderado" id="moderado">
+        <label for="moderado">Moderado</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Intenso" id="intenso">
+        <label for="intenso">Intenso</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Intermitente" id="intermitente">
+        <label for="intermitente">Intermitente</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Continuo" id="continuo">
+        <label for="continuo">Continuo</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Espontáneo" id="espontaneo">
+        <label for="espontaneo">Espontáneo</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Provocado" id="provocado">
+        <label for="provocado">Provocado</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Al frío" id="al_frio">
+        <label for="al_frio">Al frío</label>
+        <input type="checkbox" name="tipo_dolor[]" value="Al calor" id="al_calor">
+        <label for="al_calor">Al calor</label><br>
+
+        <label for="ubicacion_dolor">En dónde siente el dolor (especificar):</label>
+        <input type="text" name="ubicacion_dolor" id="ubicacion_dolor"><br>
+
+        <label for="sufrio_golpe_dientes">¿Ha sufrido algún golpe en los dientes?</label>
+        <input type="radio" name="sufrio_golpe_dientes" value="Si" id="sufrio_golpe_dientes_si">
+        <label for="sufrio_golpe_dientes_si">Sí</label>
+        <input type="radio" name="sufrio_golpe_dientes" value="No" id="sufrio_golpe_dientes_no">
+        <label for="sufrio_golpe_dientes_no">No</label>
+
+        <label for="cuando_golpe_dientes">Cuándo:</label>
+        <input type="text" name="cuando_golpe_dientes" id="cuando_golpe_dientes">
+
+        <label for="como_golpe_dientes">Cómo:</label>
+        <textarea type="text" name="como_golpe_dientes" id="como_golpe_dientes"></textarea><br>
+
+        <label for="fracturo_diente">¿Se le fracturó algún diente?</label>
+        <input type="radio" name="fracturo_diente" value="Si" id="fracturo_diente_si">
+        <label for="fracturo_diente_si">Sí</label>
+        <input type="radio" name="fracturo_diente" value="No" id="fracturo_diente_no">
+        <label for="fracturo_diente_no">No</label><br>
+
+        <label for="cual_fracturo_diente">Cuál:</label>
+        <input type="text" name="cual_fracturo_diente" id="cual_fracturo_diente"><br>
+
+        <label for="recibio_tratamiento_fractura">¿Recibió tratamiento?</label>
+        <input type="radio" name="recibio_tratamiento_fractura" value="Si" id="recibio_tratamiento_fractura_si">
+        <label for="recibio_tratamiento_fractura_si">Sí</label>
+        <input type="radio" name="recibio_tratamiento_fractura" value="No" id="recibio_tratamiento_fractura_no">
+        <label for="recibio_tratamiento_fractura_no">No</label><br>
+
+        <label for="cual_tratamiento_fractura">Cuál:</label>
+        <textarea type="text" name="cual_tratamiento_fractura" id="cual_tratamiento_fractura"></textarea><br>
+
+        <label for="dificultad_hablar">¿Tiene dificultad para hablar?</label>
+        <input type="radio" name="dificultad_hablar" value="Si" id="dificultad_hablar_si">
+        <label for="dificultad_hablar_si">Sí</label>
+        <input type="radio" name="dificultad_hablar" value="No" id="dificultad_hablar_no">
+        <label for="dificultad_hablar_no">No</label><br>
+
+        <label for="dificultad_masticar">¿Tiene dificultad para masticar?</label>
+        <input type="radio" name="dificultad_masticar" value="Si" id="dificultad_masticar_si">
+        <label for="dificultad_masticar_si">Sí</label>
+        <input type="radio" name="dificultad_masticar" value="No" id="dificultad_masticar_no">
+        <label for="dificultad_masticar_no">No</label><br>
+
+        <label for="dificultad_abrir_boca">¿Tiene dificultad para abrir la boca?</label>
+        <input type="radio" name="dificultad_abrir_boca" value="Si" id="dificultad_abrir_boca_si">
+        <label for="dificultad_abrir_boca_si">Sí</label>
+        <input type="radio" name="dificultad_abrir_boca" value="No" id="dificultad_abrir_boca_no">
+        <label for="dificultad_abrir_boca_no">No</label><br>
+
+        <label for="dificultad_tragar_alimentos">¿Tiene dificultad para tragar alimentos?</label>
+        <input type="radio" name="dificultad_tragar_alimentos" value="Si" id="dificultad_tragar_alimentos_si">
+        <label for="dificultad_tragar_alimentos_si">Sí</label>
+        <input type="radio" name="dificultad_tragar_alimentos" value="No" id="dificultad_tragar_alimentos_no">
+        <label for="dificultad_tragar_alimentos_no">No</label><br>
+
+        <label for="estado_higiene_bucal">Estado de higiene bucal:</label>
+        <select name="estado_higiene_bucal" id="estado_higiene_bucal">
+                <option value="Muy bien">Muy bien</option>
+                <option value="Bien">Bien</option>
+                <option value="Deficiente">Deficiente</option>
+                <option value="Malo">Malo</option>
+            </select><br>
+
+        <h2>Examen Clínico:</h2>
+        <label for="estado_encias">Estado de las Encías y Tejidos Blandos:</label>
+        <input name="estado_encias" id="estado_encias"><br>
+
+        <label for="estado_dientes">Estado de los Dientes:</label>
+        <input name="estado_dientes" id="estado_dientes"><br>
+
+        <label for="oclusion">Oclusión (Mordida):</label>
+        <input name="oclusion" id="oclusion"><br>
+
+        <label for="bolsas_periodontales">Profundidad de las Bolsas Periodontales (si es necesario):</label>
+        <input type="text" name="bolsas_periodontales" id="bolsas_periodontales"><br>
+
+        <label for="restauraciones">Restauraciones Dentales:</label>
+        <textarea name="restauraciones" id="restauraciones"></textarea><br>
+
+        <h2>Plan de Tratamiento:</h2>
+        <label for="tratamiento_recomendado">Recomendaciones de Tratamiento (separadas por comas):</label>
+        <input type="text" name="tratamiento_recomendado" id="tratamiento_recomendado"><br>
+
+        <label for="costo_tratamiento">Estimación de Costos:</label>
+        <input type="text" name="costo_tratamiento" id="costo_tratamiento"><br>
+
+        <label for="duracion_tratamiento">Duración del Tratamiento:</label>
+        <input type="text" name="duracion_tratamiento" id="duracion_tratamiento"><br>
+
+        <label for="visitas_seguimiento">Visitas de Seguimiento:</label>
+        <textarea name="visitas_seguimiento" id="visitas_seguimiento"></textarea><br>
+
+        <h2>Consentimiento Informado:</h2>
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" required><br>
+        <label for="consentimiento_paciente">Consentimiento del Paciente (Firma):</label>
+        <input type="text" name="consentimiento_paciente" id="consentimiento_paciente"><br>
+
+        <label for="consentimiento_profesional">Consentimiento del Profesional Dental (Firma):</label>
+        <input type="text" name="consentimiento_profesional" id="consentimiento_profesional"><br>
+
+        <h2>Notas del Dentista:</h2>
+        <label for="observaciones_dentista">Observaciones y Hallazgos:</label>
+        <textarea name="observaciones_dentista" id="observaciones_dentista"></textarea><br>
+
+        <label for="decisiones_clinicas">Decisiones Clínicas:</label>
+        <textarea name="decisiones_clinicas" id="decisiones_clinicas"></textarea><br>
+
+        <label for="seguimiento_paciente">Seguimiento del Paciente (detalles):</label>
+        <textarea name="seguimiento_paciente" id="seguimiento_paciente"></textarea><br>
+
+        <input type="submit" name="register" value="Registrar">
+    </form>
+</body>
+
+</html>
